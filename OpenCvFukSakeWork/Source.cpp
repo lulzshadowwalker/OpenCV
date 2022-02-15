@@ -1,20 +1,24 @@
-
-#include <opencv2/imgcodecs.hpp>
-#include <opencv2/highgui.hpp>
-#include <opencv2/imgproc.hpp>
+#include "Chapter1.hpp";
+#include "Chapter2.hpp";
 #include <iostream>
 
-using namespace cv;
-using namespace std;
+using namespace ch1;
+using namespace ch2;
+
+int main() {
+
+	//// show image
+	//showImage("resources/Kitty.png");
+
+	//// colored to gray-scale image
+	//rgbToGray("resources/Kitty.png");
+
+	//// show video
+	//showVideo("resources/SoT.avi");
+
+	//// open webcam
+	//showWebcam();
 
 
-/////////////////  Images  //////////////////////
-
-void main() {
-
-    string path = "Resources/KITTY.png";
-    Mat img = imread(path);
-    imshow("Image", img);
-    waitKey(0);
-
+	return 0;
 }
