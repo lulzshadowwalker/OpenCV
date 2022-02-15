@@ -11,6 +11,10 @@
 // idk if this is good practice to use namespaces but i think it's kinda suitable in this case
 // actually i think it's good, i dont need to use a class to access them whenever i want to + 
 // i can just `using namespace std;`
+
+/// <summary>
+/// read/show image, video & webcam
+/// </summary>
 namespace ch1 {
 
 	void showImage(std::string imagePath, std::string windowName = "bongoTap") {
