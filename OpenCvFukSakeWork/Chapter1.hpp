@@ -35,7 +35,6 @@ namespace ch1 {
 		}
 	}
 
-	// TODO test this on some webcam
 	void showWebcam(double fps = 60.0, int cameraId = 0, std::string windowName = "bongoTap") {
 		// Exact saame code as [showVideo] except you pass [cameraId] instead of [videoPath]
 		// TODO refactor ? :)
