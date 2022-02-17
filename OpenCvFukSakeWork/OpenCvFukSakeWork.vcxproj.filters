@@ -29,5 +29,17 @@
     <ClInclude Include="Chapter2.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Chapter3.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Chapter4.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="utils.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Chapter5.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
