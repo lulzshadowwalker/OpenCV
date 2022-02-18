@@ -23,7 +23,7 @@ namespace ch4 {
 	}
 
 	// dart programmer move Hehe :D 
-	// same approach for e.g. a rectangle [Rect] or a [line] or text [putTex
+	// same approach for e.g. a rectangle [Rect] or a [line] or text [putText]
 	cv::Mat drawCircleInCenter(
 		cv::Mat image,
 		bool debug = false,
@@ -41,6 +41,42 @@ namespace ch4 {
 
 	}
 
+	cv::Mat addText(cv::Mat sourceImage, std::string body, bool debug = false, std::string header = "") {
+
+		// i'll probably make this an entire project with flutter/c++/firebase
+		// coming from flutter, I like everything to be dynamic :D 
+		double width = sourceImage.size().width;
+		double bodyWidth = width * 0.50;
+		double headerWidth = width * 0.50;
+
+		double height = sourceImage.size().height;
+		double bodyHeight = height * 0.80;
+		double headerHeight = height * 0.10;
+
+
+		/// TODO  find a way to dynamically calculate the width of each character to perfectly center the line
+		/// TODO  wrap to the next line on overflow 
+
+		// header:: the outline
+		cv::putText(sourceImage, header, cv::Point(headerWidth - header.length() * 8, headerHeight), cv::FONT_HERSHEY_COMPLEX, 0.75, cv::Scalar(0, 0, 0), 10);
+
+		// header:: the actual text
+		cv::putText(sourceImage, header, cv::Point(headerWidth - header.length() * 8, headerHeight), cv::FONT_HERSHEY_COMPLEX, 0.75, cv::Scalar(255, 255, 255), 2);
+
+		// body:: the outline
+		cv::putText(sourceImage, body, cv::Point(bodyWidth - body.length() * 6, bodyHeight), cv::FONT_HERSHEY_COMPLEX, 0.75, cv::Scalar(0, 0, 0), 10);
+
+		// body:: the actual text
+		cv::putText(sourceImage, body, cv::Point(bodyWidth - body.length() * 6, bodyHeight), cv::FONT_HERSHEY_COMPLEX, 0.75, cv::Scalar(255, 255, 255), 2);
+
+		showDebug(sourceImage, debug);
+
+		// nice
+		// TIME TO MAKE CAT MEMES MUAHAHAHA
+
+		return sourceImage;
+
+	}
 
 
 
