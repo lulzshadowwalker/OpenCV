@@ -50,7 +50,7 @@ I created a header file for every chapter, each one with it's one namespace just
 
 > warp perspective
 > 
-> ![] (ReadMeImages\warping%20example.png)
+> ![] (./ReadMeImages/warping%20example.png)
 
 > **"** In OpenCV, coordinates can be 2-dimensional, 3-dimensional, or 4-dimensional.
 > 
@@ -85,6 +85,15 @@ I created a header file for every chapter, each one with it's one namespace just
 > **S**: Saturation, the amount of white light mixed with the hue ( radius )
 > 
 > **V**: Value, the chromatic notation of intensity ( height )
->
-> > ![] (ReadMeImages\HSV-color-model.png)
 > 
+> > ![] (ReadMeImages\HSV-color-model.png)
+
+- we use HSV over RGB in color detection because HSV is less sensitive to changes from e.g. lighting, reflections etc.
+  
+  > **"**
+  > 
+  > The reason we use HSV colorspace for color detection/thresholding over RGB/BGR is that HSV is more robust towards external lighting changes. This means that in cases of minor changes in external lighting (such as pale shadows,etc. ) Hue values vary relatively lesser than RGB values.
+  > 
+  > src([Nikhilanj Pv&#039;s answer to Why use an HSV image for color detection rather than an RGB image? - Quora](https://qr.ae/pGQpiZ))
+  > 
+  > **"**
