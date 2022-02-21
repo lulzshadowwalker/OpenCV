@@ -50,7 +50,14 @@ namespace ch2 {
 		cv::Mat sourceImage,
 			outputImage;
 
+
+		// It has been observed that canny edge detection method gives
+		// better result in gray scale images as well as in color. ( https://bit.ly/3I5TW2H 
+		cv::cvtColor(sourceImage, sourceImage, cv::COLOR_BGR2GRAY);
+
 		/// Canny is usually used alongside blur 
+		/// and that's because edge detection is highly sensitive to image noise
+		/// so we tend to use GaussianBlur to smooth it out ( src: https://bit.ly/34W5hUJ )
 		/// doc: ( https://docs.opencv.org/3.4/da/d5c/tutorial_canny_detector.html )
 		sourceImage = gaussianBlur(false, imagePath);
 

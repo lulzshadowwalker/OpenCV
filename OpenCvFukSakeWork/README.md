@@ -10,6 +10,7 @@ I created a header file for every chapter, each one with it's one namespace just
 - [Chapter 4](#chapter-4)
 - [Chapter 5](#chapter-5)
 - [Chapter 6](#chapter-6)
+- [Chapter 7](#chapter-7)
 
 ## Chapter 1
 
@@ -24,6 +25,8 @@ I created a header file for every chapter, each one with it's one namespace just
 
 - `Canny` edge detector is usually used alongside with some blur e.g. `GaussianBlur` as common practice, [**Canny docs**](https://docs.opencv.org/3.4/da/d5c/tutorial_canny_detector.html);
 
+> edge detection is highly sensitive to image noise, so we tend to use GaussianBlur to smooth it out ( [src] (https://bit.ly/34W5hUJ) ) <br>
+> "It has been observed that canny edge detection method gives better result in gray scale images as well as in color." ([src](https://bit.ly/3I5TW2H))
 - **dilating**[increasing the thickness] and **eroding**[decreasing the thickness], which are usually used in conjuction with [Canny] should have an equal width&height for the kernel size;
   
   > unhandled exception for a kernelSize of (0, 0) so you better handle it in the function;
@@ -80,20 +83,23 @@ I created a header file for every chapter, each one with it's one namespace just
 
 > **HSV** color model ( Cylinderical coordinate representation of points in RGB color model )
 > 
-> **H**: Hue, the dominant color percieved by an observer ( angle )
+> **H**: Hue, the dominant color percieved by an observer ( angle ) [0, 179]
 > 
-> **S**: Saturation, the amount of white light mixed with the hue ( radius )
+> **S**: Saturation, the amount of white light mixed with the hue ( radius ) [0, 255]
 > 
-> **V**: Value, the chromatic notation of intensity ( height )
+> **V**: Value, the chromatic notation of intensity ( height ) [0, 255]
 > 
 > > ![] (ReadMeImages\HSV-color-model.png)
 
 - we use HSV over RGB in color detection because HSV is less sensitive to changes from e.g. lighting, reflections etc.
   
   > **"**
-  > 
-  > The reason we use HSV colorspace for color detection/thresholding over RGB/BGR is that HSV is more robust towards external lighting changes. This means that in cases of minor changes in external lighting (such as pale shadows,etc. ) Hue values vary relatively lesser than RGB values.
-  > 
-  > src([Nikhilanj Pv&#039;s answer to Why use an HSV image for color detection rather than an RGB image? - Quora](https://qr.ae/pGQpiZ))
-  > 
+  > The reason we use HSV colorspace for color detection/thresholding over RGB/BGR is that HSV is more robust towards
+  > external lighting changes. This means that in cases of minor changes in external lighting ( such as pale shadows,etc. ) 
+  > Hue values vary relatively lesser than RGB values.
   > **"**
+  > 
+  > [src](https://qr.ae/pGQpiZ)
+
+## Chapter 7
+> shapes/contour detection
