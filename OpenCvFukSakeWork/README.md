@@ -102,4 +102,6 @@ I created a header file for every chapter, each one with it's one namespace just
   > [src](https://qr.ae/pGQpiZ)
 
 ## Chapter 7
-> shapes/contour detection
+> shapes/contour detection <br>
+> read the contours documentation from OpenCV
+<!-- TODO add demonstration pictures -->

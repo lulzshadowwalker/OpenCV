@@ -21,7 +21,7 @@ int main() {
 	cv::Mat kitty = cv::imread("resources/Kitty.png");
 	cv::Mat bongKitty = cv::imread("resources/hitdabong.JFIF");
 	cv::Mat cards = cv::imread("resources/cards.jpg");
-	cv::Mat shapes = cv::imread("resources/shapes.png");
+	cv::Mat shapes = cv::imread("resources/my-shapes.png");
 
 	//addText(bongKitty, "hit da bong wiht mee ?", true, "hey.. hooman");
 
