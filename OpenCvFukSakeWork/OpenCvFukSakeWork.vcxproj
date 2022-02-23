@@ -32,6 +32,7 @@
     <ClInclude Include="Chapter5.hpp" />
     <ClInclude Include="Chapter6.hpp" />
     <ClInclude Include="Chapter7.hpp" />
+    <ClInclude Include="Chapter8.hpp" />
     <ClInclude Include="utils.hpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

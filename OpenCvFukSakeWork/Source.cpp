@@ -5,8 +5,10 @@
 #include "Chapter5.hpp"
 #include "Chapter6.hpp"
 #include "Chapter7.hpp"
+#include "Chapter8.hpp"
 #include <iostream>
 
+// namespaces aren't rly necessary but just to keep track of things
 using namespace ch1;
 using namespace ch2;
 using namespace ch3;
@@ -14,6 +16,7 @@ using namespace ch4;
 using namespace ch5;
 using namespace ch6;
 using namespace ch7;
+using namespace ch8;
 
 // TODO Chapter 6, implement an algorithm to analyze an image and find the average color
 
@@ -23,7 +26,7 @@ int main() {
 	cv::Mat cards = cv::imread("resources/cards.jpg");
 	cv::Mat shapes = cv::imread("resources/my-shapes.png");
 
-	//addText(bongKitty, "hit da bong wiht mee ?", true, "hey.. hooman");
+	addText(bongKitty, "hit da bong wiht mee ?", true, "hey.. hooman");
 
 	/// image warping
 	//cv::Mat outputImage;
