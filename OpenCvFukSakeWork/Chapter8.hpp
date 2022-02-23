@@ -11,13 +11,13 @@ namespace ch8 {
 
 		if (!faceCascade.empty()) std::cout << "loading success: face cascade" << std::endl;
 		assert(!faceCascade.empty());
-
+		
 		std::vector<cv::Rect> faces;
 		faceCascade.detectMultiScale(sourceImage, faces, 1.1, 7);
 
 		for (int i = 0; i < faces.size(); i++) {
-			cv::rectangle(sourceImage, faces[i].tl(), faces[i].br(), cv::Scalar(0, 255, 0), 2);
-			cv::putText(sourceImage, "dead", { faces[i].x, faces[i].y - 5 }, cv::FONT_HERSHEY_DUPLEX, 0.5, cv::Scalar(0, 255, 0));
+			cv::rectangle(sourceImage, faces[i].tl(), faces[i].br(), cv::Scalar(0, 255, 149), 2);
+			cv::putText(sourceImage, "dead", { faces[i].x, faces[i].y - 5 }, cv::FONT_HERSHEY_DUPLEX, 0.5, cv::Scalar(0, 0, 255));
 				
 		}
 
