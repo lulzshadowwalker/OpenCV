@@ -21,7 +21,7 @@ namespace ch7 {
 		/// preprocessing the image
 		/// ( you can simple use the [dilateImage] function from Chapter-2 )
 		cv::cvtColor(sourceImage, sourceImage, cv::COLOR_BGR2GRAY);
-		cv::GaussianBlur(sourceImage, sourceImage, cv::Size(3,3), 3, 0);
+		cv::GaussianBlur(sourceImage, sourceImage, cv::Size(3, 3), 3, 0);
 		cv::Canny(sourceImage, sourceImage, 25, 75);
 		cv::Mat kernel = cv::getStructuringElement(cv::MORPH_RECT, cv::Size(3, 3));
 		cv::dilate(sourceImage, sourceImage, kernel);
@@ -29,7 +29,7 @@ namespace ch7 {
 
 		std::vector<std::vector<cv::Point>> contours;
 		std::vector<cv::Vec4i> heirarchy;
-		cv::findContours(sourceImage, contours, heirarchy, cv::RETR_EXTERNAL, cv::CHAIN_APPROX_SIMPLE); 
+		cv::findContours(sourceImage, contours, heirarchy, cv::RETR_EXTERNAL, cv::CHAIN_APPROX_SIMPLE);
 		// [drawContours]: -1 means draw all contours
 		//cv::drawContours(image, contours, -1, cv::Scalar(0, 0, 255), 2);
 
@@ -45,7 +45,7 @@ namespace ch7 {
 		for (int i = 0; i < contours.size(); i++) {
 			area = cv::contourArea(contours[i]);
 			std::cout << "area of contour #" << i << " is: " << area << std::endl;
-			  
+
 			if (area > 200) {
 				double perimter = cv::arcLength(contours[i], true);
 				cv::approxPolyDP(contours[i], contourApproxPoly[i], 0.02 * perimter, true);
@@ -61,20 +61,20 @@ namespace ch7 {
 
 				// printing the suitable text ( object type )
 				corners = contourApproxPoly[i].size();
-				
+
 				switch (corners)
 				{
 				case 1: objectType = "dot"; break; // hehe
 				case 2: objectType = "line"; break;
 				case 3: objectType = "trngle"; break;
-				case 4: 
-				// maybe refactor this to be a little cleaner ? maybe ? hehe
+				case 4:
+					// maybe refactor this to be a little cleaner ? maybe ? hehe
 				{
-				float aspectRatio = float(boundingRectVector[i].width) / float(boundingRectVector[i].height);
-				// just giving it a little forgiving range
-				if (abs(aspectRatio - 1) < 0.1) objectType = "sqr";
-				else objectType = "rect";
-				break;
+					float aspectRatio = float(boundingRectVector[i].width) / float(boundingRectVector[i].height);
+					// just giving it a little forgiving range
+					if (abs(aspectRatio - 1) < 0.1) objectType = "sqr";
+					else objectType = "rect";
+					break;
 				}
 				case 6: objectType = "hxgn"; break;
 				case 8: objectType = "circle"; break;
@@ -91,9 +91,9 @@ namespace ch7 {
 					cv::Point(boundingRectVector[i].x, boundingRectVector[i].y - 5),
 					cv::FONT_HERSHEY_DUPLEX,
 					0.5,
-					cv::Scalar(0,0,180)
+					cv::Scalar(0, 0, 180)
 				);
-			}	
+			}
 		}
 
 		showDebug(image, debug);

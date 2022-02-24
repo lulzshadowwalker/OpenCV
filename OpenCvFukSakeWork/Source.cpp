@@ -1,4 +1,4 @@
-#include "Chapter1.hpp"
+﻿#include "Chapter1.hpp"
 #include "Chapter2.hpp"
 #include "Chapter3.hpp"
 #include "Chapter4.hpp"
@@ -25,14 +25,18 @@ int main() {
 	cv::Mat bongKitty = cv::imread("resources/hitdabong.JFIF");
 	cv::Mat cards = cv::imread("resources/cards.jpg");
 	cv::Mat shapes = cv::imread("resources/my-shapes.png");
+	cv::Mat stars = cv::imread("resources/stars.png");
+	cv::Mat face = cv::imread("resources/face.png");
 
-	addText(bongKitty, "hit da bong wiht mee ?", true, "hey.. hooman");
+	//addText(bongKitty, "take a sniff, its ghood X:O---:Z", true, "wanna smoke ahss whit me ?");
 
 	/// image warping
 	//cv::Mat outputImage;
 	//cv::Point2f source[] = { {527, 146}, {769,190}, {405,397}, {674,457} };
 	//warpImage(cards, outputImage, source, 250, 350, true);
 
-	detectShape(shapes, true);
+	//detectShape(stars, true);
+
+	detectFace(face, true);
 	return 0;
 }

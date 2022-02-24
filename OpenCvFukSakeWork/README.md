@@ -2,6 +2,8 @@
 
 I created a header file for every chapter, each one with it's one namespace just to keep track of stuff even though not very neccessary.
 
+- Ctrl + bckspc/del || Alt + drag select
+
 ## Table of Contents
 
 - [Chapter 1](#chapter-1)
@@ -105,3 +107,8 @@ I created a header file for every chapter, each one with it's one namespace just
 > shapes/contour detection <br>
 > read the contours documentation from OpenCV
 <!-- TODO add demonstration pictures -->
+
+## Chapter 8
+> face detection
+<!-- TODO add demonstration pictures -->
+
