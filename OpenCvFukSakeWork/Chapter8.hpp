@@ -27,7 +27,6 @@ namespace ch8 {
 
 		for (int i = 0; i < faces.size(); i++) {
 			cv::rectangle(sourceImage, faces[i].tl(), faces[i].br(), cv::Scalar(0, 255, 149), 2);
-
 			randomIndex = rand() % 2;
 			cv::putText(
 				sourceImage,
