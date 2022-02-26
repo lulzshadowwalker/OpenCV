@@ -26,7 +26,7 @@ int main() {
 	cv::Mat cards = cv::imread("resources/cards.jpg");
 	cv::Mat shapes = cv::imread("resources/my-shapes.png");
 	cv::Mat stars = cv::imread("resources/stars.png");
-	cv::Mat face = cv::imread("resources/face.png");
+	cv::Mat face = cv::imread("resources/face.jpg");
 
 	//addText(bongKitty, "take a sniff, its ghood X:O---:Z", true, "wanna smoke ahss whit me ?");
 

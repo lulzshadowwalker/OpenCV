@@ -34,6 +34,7 @@
     <ClInclude Include="Chapter7.hpp" />
     <ClInclude Include="Chapter8.hpp" />
     <ClInclude Include="utils.hpp" />
+    <ClInclude Include="VirtualPainter.hpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
