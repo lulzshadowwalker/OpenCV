@@ -1,0 +1,21 @@
+C:\Users\hp\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\213.6777.58\bin\cmake\win\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=C:/Users/hp/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/213.6777.58/bin/ninja/win/ninja.exe -G Ninja C:\Users\hp\Documents\LULZ\CPP\OpenCV\OpenCvFukSakeWork
+-- OpenCV ARCH: x86
+-- OpenCV RUNTIME: vc14
+-- OpenCV STATIC: OFF
+CMake Warning at C:/opencv/build/OpenCVConfig.cmake:190 (message):
+  Found OpenCV Windows Pack but it has no binaries compatible with your
+  configuration.
+
+  You should manually point CMake variable OpenCV_DIR to your build of OpenCV
+  library.
+Call Stack (most recent call first):
+  CMakeLists.txt:24 (find_package)
+
+
+CMake Error at CMakeLists.txt:49 (target_link_libraries):
+  Cannot specify link libraries for target "project" which is not built by
+  this project.
+
+
+-- Configuring incomplete, errors occurred!
+See also "C:/Users/hp/Documents/LULZ/CPP/OpenCV/OpenCvFukSakeWork/cmake-build-debug/CMakeFiles/CMakeOutput.log".

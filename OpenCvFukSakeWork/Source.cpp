@@ -6,6 +6,7 @@
 #include "Chapter6.hpp"
 #include "Chapter7.hpp"
 #include "Chapter8.hpp"
+#include "VirtualPainter.hpp"
 #include <iostream>
 
 // namespaces aren't rly necessary but just to keep track of things
@@ -17,6 +18,7 @@ using namespace ch5;
 using namespace ch6;
 using namespace ch7;
 using namespace ch8;
+using namespace vp;
 
 // TODO Chapter 6, implement an algorithm to analyze an image and find the average color
 
@@ -37,6 +39,19 @@ int main() {
 
 	//detectShape(stars, true);
 
-	detectFace(face, true);
+	//detectFace(face, true);
+
+	//colorDetectWebcam();
+
+	// virtual painter
+        cv::VideoCapture webcam(0);
+        cv::Mat frame;
+
+		std::vector<std::vector<int>> targetPoints = {};
+        while (true) {
+          webcam.read(frame);
+          virtualPainter(frame, targetPoints);
+		}
+
 	return 0;
 }

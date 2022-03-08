@@ -2,6 +2,7 @@
 #define CHAPTER_5
 #include <opencv2/opencv.hpp>
 
+
 namespace ch5 {
 
 	/// started to pass by reference not to wait for debug [waitKey] to return the image
